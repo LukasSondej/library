@@ -3,7 +3,7 @@
 
 export const useApi = () => {
 
-const call = async<R, T = {}>(url: string, method: 'GET' | "DELETE" | "POST", body?: T) => {
+const call = async<R, T = {}>(url: string, method: 'GET' | "DELETE" | "POST"| "PUT", body?: T) => {
 const createBody = 
 {method,
 headers: {'Content-Type': 'application/json'},
@@ -33,6 +33,10 @@ return await call<R>(url, "GET")
 const postData = async <R, T>(url: string, data: T) => {
     return await call<R, T>(url, "POST", data)
 }
+const putData = async<R, T>(url: string, data: T) => {
+    return call<R, T>(url, "PUT", data)
 
-return {getData, postData}
+}
+
+return {getData, postData, putData}
 } 
