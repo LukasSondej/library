@@ -30,6 +30,10 @@ const getData = async<R>(url: string) => {
 return await call<R>(url, "GET")
 
 }
+const deleteBook = async<R>(url: string) => {
+return await call<R>(url, "DELETE")
+
+}
 const postData = async <R, T>(url: string, data: T) => {
     return await call<R, T>(url, "POST", data)
 }
@@ -38,5 +42,5 @@ const putData = async<R, T>(url: string, data: T) => {
 
 }
 
-return {getData, postData, putData}
+return {getData, postData, putData, deleteBook}
 } 

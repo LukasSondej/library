@@ -1,12 +1,14 @@
 import { useState } from "react"
 import type { Book } from "./types"
 import EditBook from "./EditBook"
+import { useDeleteBookQuery } from "./queries/useDeleteBookQuery"
 
 type Props  ={
 element: Book
 }
 
 export const SingleElement = ({element}: Props) => {
+    const {mutate}= useDeleteBookQuery()
     const [isEdit, setIsEdit] = useState<boolean>(false)
     if(isEdit)
 {
@@ -17,5 +19,6 @@ export const SingleElement = ({element}: Props) => {
         <p>{element.description}</p>
         
             <button onClick={() => setIsEdit(prev => !prev)}>Edit</button>
+            <button onClick={()=>mutate(element.id)}>Delete</button>
         </li>
 }
