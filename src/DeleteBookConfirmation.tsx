@@ -12,11 +12,11 @@ export const DeleteBookConfirmation = ({element, setIsDeleteConfirmation}: Props
 return (
     <div>
         <p>{`Czy napewno chcesz usunąć książkę ${element.title} ? `}</p>
-        <button onClick={()=>{
+        <button className="btn-danger" onClick={()=>{
             mutate(element.id)
             setIsDeleteConfirmation(false)
         }}>Tak</button>
-        <button onClick={()=>{
+        <button className="btn-primary" onClick={()=>{
             
             setIsDeleteConfirmation(false)
         } }>Nie</button>

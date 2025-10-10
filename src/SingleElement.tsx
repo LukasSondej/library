@@ -26,7 +26,7 @@ return <li >
         <p>{element.year}</p>
         <p>{element.description}</p>
         
-            <button onClick={() => setIsEdit(prev => !prev)}>Edit</button>
-            <button onClick={() => setIsDeleteConfirm(true)}>Delete</button>
+            <button className="btn-primary" onClick={() => setIsEdit(prev => !prev)}>Edit</button>
+            <button className="btn-danger" onClick={() => setIsDeleteConfirm(true)}>Delete</button>
         </li>
 }

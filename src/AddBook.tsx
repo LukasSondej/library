@@ -51,7 +51,7 @@ const handleSubmit = (e: React.FormEvent) => {
             onChange={handleChange}
         />
     </p>
-    <button type="submit" disabled={isPending}>Dodaj ksionzke</button>
+    <button className="btn-add" type="submit" disabled={isPending}>Dodaj ksionzke</button>
     {error && <div>Blond {error.message}</div>}
     {data && <div>Książka dodana! ID: {data.id}</div>}
 </form>

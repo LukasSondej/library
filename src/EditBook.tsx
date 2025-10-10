@@ -72,7 +72,7 @@ useEffect(() => {
                     onChange={handleChange}
                 />
             </p>
-            <button type="submit" disabled={isPending} 
+            <button className="btn-add" type="submit" disabled={isPending} 
         >Zapisz zmiany</button>
            
             {editData && <div>Książka zaktualizowana! ID: {editData.id}</div>}
