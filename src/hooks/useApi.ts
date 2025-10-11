@@ -1,7 +1,8 @@
 
-  const API_URL = 'http://localhost:3000/'
+  const API_URL = import.meta.env.VITE_API_URL
 
 export const useApi = () => {
+    console.log(API_URL)
 
 const call = async<R, T = {}>(url: string, method: 'GET' | "DELETE" | "POST"| "PUT", body?: T) => {
 const createBody = 

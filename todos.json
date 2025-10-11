@@ -1,12 +1,6 @@
 {
   "books": [
     {
-      "id": "1",
-      "year": 1997,
-      "title": "Harry Potter i Kamień Filozoficzny",
-      "description": "Pierwsza część przygód młodego czarodzieja."
-    },
-    {
       "id": "2",
       "year": 1954,
       "title": "Władca Pierścieni: Drużyna Pierścienia",
@@ -17,6 +11,12 @@
       "year": 1985,
       "title": "Mały Książę",
       "description": "Klasyczna opowieść o przyjaźni i dorastaniu."
+    },
+    {
+      "id": "4",
+      "year": 1896,
+      "title": "Dracula",
+      "description": "Powieść grozy o hrabim Drakuli."
     }
   ]
 }
